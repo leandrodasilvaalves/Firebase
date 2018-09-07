@@ -6,21 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Curso-FB</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>Bem vindo ao Firebase</h1>
+    <h1>Armazenamento</h1>
+    <a href="index.html">Voltar para Home</a>
 
-    <a href="realtime-database.html">Real Time DataBase</a>
-    <a href="authentication.html">Autenticação</a>
-    <a href="storage.html">Armazenamento</a>
+    <br>
+    <br>
+    <progress value="0" max="100" id="uploader"></progress>
+    <br>
+    <input type="file" value="Upload" id="fileButton">
+
 
     <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
     <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/storage.js"></script>
 </body>
 
 </html>
