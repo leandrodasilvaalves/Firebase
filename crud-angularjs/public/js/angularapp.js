@@ -1,0 +1,1 @@
+var appFb = angular.module('appAngFB',['firebase']);

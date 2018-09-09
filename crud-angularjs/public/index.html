@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appAngFB">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Firebase</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="text-center" ng-controller="userController as vm" ng-init="vm.loadAll()">
+
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto" style="margin-bottom:  50px !important;">
+      <div class="inner">
+        <h3 class="masthead-brand">Firebase</h3>
+      </div>
+    </header>
+
+    <main role="main" class="inner cover">
+      <h1 class="cover-heading">Cadastro de Usuários</h1>
+      <div class="col-md-6">
+        <form>          
+          <div class="form-group">
+            <label for="txtName"></label>
+            <input id="txtName" type="text" class="form-control" placeholder="Nome" ng-model="vm.user.name">
+          </div>
+          <div class="form-group">
+            <label for="txtAge"></label>
+            <input id="txtAge" type="text" class="form-control" placeholder="Idade" ng-model="vm.user.age">
+          </div>
+        </form>
+        <button class="btn btn-block btn-info" ng-click="vm.save(vm.user)">Salvar</button>
+      </div>
+      <br>
+      <br>
+      
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="user in vm.users">
+            <td ng-bind="user.name"></td>
+            <td ng-bind="user.age"></td>
+            <td>
+              <button class="btn btn-sm btn-warning" ng-click="vm.getUser(user)">Editar</button>
+              <button class="btn btn-sm btn-danger" ng-click="vm.deleteConfirm(user)">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </main>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+  <script src="js/firebase.app.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+  <script src="js/angularapp.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+  <!-- controllers -->
+  <script src="js/controllers/user.controller.js"></script>
+
+</body>
+
+</html>
