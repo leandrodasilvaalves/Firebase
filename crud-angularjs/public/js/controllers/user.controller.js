@@ -29,7 +29,7 @@
         };
 
         vm.getUser = function (user) {
-            vm.user = vm.users.$getRecord(user.$id);             
+            vm.user = vm.users.$getRecord(user.$id);
         };
 
         vm.save = function (user) {
@@ -55,7 +55,7 @@
                     }
                 });
         }
-        
+
     }
 
     app.controller('userController', ['$scope', '$firebaseArray', userController])

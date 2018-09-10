@@ -104,3 +104,6 @@ body {
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
+.modal-content{
+  background-color: #252222;
+}

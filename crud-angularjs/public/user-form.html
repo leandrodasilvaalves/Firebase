@@ -1,0 +1,12 @@
+<h3 class="cover-heading">Cadastro de Usuários</h3>
+<form>
+    <div class="form-group">
+        <label for="txtName"></label>
+        <input id="txtName" type="text" class="form-control" placeholder="Nome" ng-model="vm.user.name">
+    </div>
+    <div class="form-group">
+        <label for="txtAge"></label>
+        <input id="txtAge" type="text" class="form-control" placeholder="Idade" ng-model="vm.user.age">
+    </div>
+</form>
+<button class="btn btn-block btn-info" ng-click="vm.save(vm.user)">Salvar</button>

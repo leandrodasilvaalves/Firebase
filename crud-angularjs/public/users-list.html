@@ -1,0 +1,19 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in vm.users">
+        <td ng-bind="user.name"></td>
+        <td ng-bind="user.age"></td>
+        <td>
+          <button class="btn btn-sm btn-warning" ng-click="vm.getUser(user)">Editar</button>
+          <button class="btn btn-sm btn-danger" ng-click="vm.deleteConfirm(user)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
