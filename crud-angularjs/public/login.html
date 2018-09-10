@@ -25,10 +25,10 @@
               <br>
               <p class="text-center"><small>-- ou --</small></p>
               <p class="text-center">
-                <button class="btn btn-lg btn-default" id="authGithubButton"><i class="fa fa-github"></i></button>
-                <button class="btn btn-lg btn-primary" id="authFacebookButton"><i class="fa fa-facebook"></i></button>
-                <button class="btn btn-lg btn-danger" id="authGoogleButton"><i class="fa fa-google"></i></button>
-                <button class="btn btn-lg btn-warning" id="authAnonymouslyButton"><i class="fa fa-user"></i></button>
+                <button class="btn btn-lg btn-default" ng-click="lg.signInWithProvider('github')"><i class="fa fa-github"></i></button>
+                <button class="btn btn-lg btn-primary" ng-click="lg.signInWithProvider('facebook')"><i class="fa fa-facebook"></i></button>
+                <button class="btn btn-lg btn-danger"  ng-click="lg.signInWithProvider('google')"><i class="fa fa-google"></i></button>
+                <button class="btn btn-lg btn-warning" ng-click="lg.signInAnonymously()"><i class="fa fa-user"></i></button>
               </p>
               <button class="btn btn-lg btn-block btn-outline-info" ng-click="lg.signOut()">Sair</button>
     
