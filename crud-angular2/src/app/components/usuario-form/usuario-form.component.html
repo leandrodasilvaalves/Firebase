@@ -1,0 +1,11 @@
+<form>
+  <div class="form-group">
+    <label>Usuario</label>
+    <input type="text" class="form-control" placeholder="Enter email" [(ngModel)]="usuario.nome" name="nome"/>
+  </div>
+  <div class="form-group">
+    <label>Senha</label>
+    <input type="text" class="form-control" placeholder="Password" [(ngModel)]="usuario.senha" name="senha"/>
+  </div>   
+  <button class="btn btn-primary" (click)="salvarUsuario(usuario)">Salvar</button>
+</form>

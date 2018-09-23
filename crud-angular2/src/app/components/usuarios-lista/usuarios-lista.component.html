@@ -1,0 +1,24 @@
+<usuario-form [usuario]="usuario" [modoEdicao]="modoEdicao"></usuario-form>
+  <br>
+<h3>Base de dados Firestore</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Senha</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios | async">
+      <td>{{ usuario.nome }}</td>
+      <td>{{ usuario.senha }}</td>
+      <td>
+        <div class="btn-group btn-group-sm" role="group">
+          <button type="button" class="btn btn-default btn-info" (click)="selecionarUsuario(usuario)"><i class="fa fa-pencil"></i></button>
+          <button type="button" class="btn btn-default btn-danger" (click)="confirmarExclusao(usuario)"><i class="fa fa-trash"></i></button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
